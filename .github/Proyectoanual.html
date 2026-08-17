@@ -65,6 +65,19 @@
         </form>
 
     </main>
+ <!-- Navegador al final del index.html -->
+<hr>
+<h3>Ir a otra página:</h3>
+<input type="text" id="destino" placeholder="Ejemplo: coso.html">
+<button onclick="irAPagina()">Ir</button>
 
+<script>
+    function irAPagina() {
+        var pagina = document.getElementById('destino').value;
+        if (pagina !== '') {
+            window.location.href = pagina;
+        }
+    }
+</script>
 </body>
 </html>
