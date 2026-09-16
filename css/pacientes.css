@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-principal: #145b7d;
+    --azul-boton: #1976a3;
+    --azul-suave: #e8f3f7;
+    --borde: #d5e0e5;
+    --texto: #263238;
+}
+
+body {
+    margin: 0;
+    padding: 32px clamp(16px, 5vw, 64px);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #f4f7f9;
+    color: var(--texto);
+}
+
+h1,
+h2 {
+    color: var(--azul-principal);
+}
+
+h1 {
+    margin: 0 0 28px;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+h2 {
+    margin: 28px 0 14px;
+    font-size: 1.35rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+    max-width: 760px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+    color: #40545d;
+}
+
+input {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 11px;
+    font: inherit;
+    color: var(--texto);
+    background: #fff;
+    border: 1px solid #b8c9d1;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: 3px solid rgba(25, 118, 163, 0.2);
+    border-color: var(--azul-boton);
+}
+
+button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 10px 18px;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: var(--azul-boton);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #125779;
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(25, 118, 163, 0.3);
+    outline-offset: 2px;
+}
+
+table {
+    width: 100%;
+    min-width: 680px;
+    margin-top: 10px;
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    border-spacing: 0;
+    background: #fff;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    color: #fff;
+    background: var(--azul-principal);
+}
+
+tbody tr:nth-child(even) {
+    background: #f7fafb;
+}
+
+tbody tr:hover {
+    background: var(--azul-suave);
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 22px 14px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
