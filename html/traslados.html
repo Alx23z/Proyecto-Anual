@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Traslados - S.H Clínica</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Programar Traslado</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="paciente">ID Paciente</label>
+                <input type="number" id="paciente" name="paciente_id" required>
+            </div>
+            <div class="form-group">
+                <label for="ambulancia">ID Ambulancia</label>
+                <input type="number" id="ambulancia" name="ambulancia_id" required>
+            </div>
+            <div class="form-group">
+                <label for="conductor">ID Conductor</label>
+                <input type="number" id="conductor" name="conductor_id" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha del Traslado</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="salida">Hora de Salida</label>
+                <input type="time" id="salida" name="hora_salida" required>
+            </div>
+            <input type="submit" value="Registrar Traslado">
+        </form>
+        <a href="principal.html" class="btn-volver">Volver al inicio</a>
+    </div>
+</body>
+</html>
