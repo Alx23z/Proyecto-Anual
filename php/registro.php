@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
 
     if (!empty($username) && !empty($password)) {
-        // Consulta preparada para evitar inyección SQL
+
         $stmt = $conn->prepare("SELECT id_usuario_pk, nombre, contraseña, rol FROM USUARIO WHERE email = ? OR nombre = ?");
         $stmt->bind_param("ss", $username, $username);
         $stmt->execute();
