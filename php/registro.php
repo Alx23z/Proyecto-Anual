@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'conexion.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'registro.php';
 
 if (!isset($conn) || !($conn instanceof mysqli)) {
     die('No se pudo establecer la conexión a la base de datos.');
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
 
     if (!empty($username) && !empty($password)) {
-
+        // Consulta preparada para evitar inyección SQL
         $stmt = $conn->prepare("SELECT id_usuario_pk, nombre, contraseña, rol FROM USUARIO WHERE email = ? OR nombre = ?");
         $stmt->bind_param("ss", $username, $username);
         $stmt->execute();
