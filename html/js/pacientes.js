@@ -1,95 +1,123 @@
 const form = document.getElementById("formPaciente");
 const lista = document.getElementById("lista");
 
+
+// MOSTRAR PACIENTES
 function cargarPacientes() {
 
-    fetch("pacientes.php")
-    .then(res => res.json())
-    .then(pacientes => {
+    fetch("../php/paciente.php")
+        .then(respuesta => respuesta.json())
+        .then(datos => {
 
-        lista.innerHTML = "";
+            lista.innerHTML = "";
 
-        pacientes.forEach(p => {
+            datos.forEach(paciente => {
 
-            lista.innerHTML += `
-                <tr>
-                    <td>${p.id_paciente}</td>
-                    <td>${p.nombre}</td>
-                    <td>${p.apellido}</td>
-                    <td>${p.dni}</td>
-                    <td>${p.fecha_nacimiento}</td>
-                    <td>${p.telefono}</td>
+                lista.innerHTML += `
+                    <tr>
+                        <td>${paciente.id_paciente}</td>
+                        <td>${paciente.nombre}</td>
+                        <td>${paciente.apellido}</td>
+                        <td>${paciente.dni}</td>
+                        <td>${paciente.fecha_nacimiento}</td>
+                        <td>${paciente.telefono}</td>
 
-                    <td>
-                        <button onclick='editar(${JSON.stringify(p)})'>
-                            Modificar
-                        </button>
+                        <td>
+                            <button onclick="editar(
+                                '${paciente.id_paciente}',
+                                '${paciente.nombre}',
+                                '${paciente.apellido}',
+                                '${paciente.dni}',
+                                '${paciente.fecha_nacimiento}',
+                                '${paciente.telefono}'
+                            )">
+                                Modificar
+                            </button>
 
-                        <button onclick='eliminar(${p.id_paciente})'>
-                            Eliminar
-                        </button>
-                    </td>
-                </tr>
-            `;
+                            <button onclick="eliminar(${paciente.id_paciente})">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                `;
+
+            });
+
         });
-    });
+
 }
 
 
-form.addEventListener("submit", function(e) {
+// GUARDAR
+form.addEventListener("submit", function(evento) {
 
-    e.preventDefault();
+    evento.preventDefault();
 
-    let datos = new FormData();
+    const datos = new FormData(form);
 
-    datos.append("id", document.getElementById("id").value);
-    datos.append("nombre", document.getElementById("nombre").value);
-    datos.append("apellido", document.getElementById("apellido").value);
-    datos.append("dni", document.getElementById("dni").value);
-    datos.append("fecha", document.getElementById("fecha").value);
-    datos.append("telefono", document.getElementById("telefono").value);
-
-    fetch("pacientes.php", {
+    fetch("../php/paciente.php", {
         method: "POST",
         body: datos
     })
-    .then(res => res.json())
+
+    .then(respuesta => respuesta.json())
+
     .then(data => {
 
         alert(data.mensaje);
 
         form.reset();
+
         document.getElementById("id").value = "";
 
         cargarPacientes();
+
     });
+
 });
 
 
-function editar(p) {
+// MODIFICAR
+function editar(id, nombre, apellido, dni, fecha, telefono) {
 
-    document.getElementById("id").value = p.id_paciente;
-    document.getElementById("nombre").value = p.nombre;
-    document.getElementById("apellido").value = p.apellido;
-    document.getElementById("dni").value = p.dni;
-    document.getElementById("fecha").value = p.fecha_nacimiento;
-    document.getElementById("telefono").value = p.telefono;
+    document.getElementById("id").value = id;
+    document.getElementById("nombre").value = nombre;
+    document.getElementById("apellido").value = apellido;
+    document.getElementById("dni").value = dni;
+    document.getElementById("fecha").value = fecha;
+    document.getElementById("telefono").value = telefono;
+
 }
 
 
+// ELIMINAR
 function eliminar(id) {
 
-    if (!confirm("¿Eliminar paciente?")) return;
+    if (confirm("¿Querés eliminar este paciente?")) {
 
-    let datos = new FormData();
-    datos.append("eliminar", id);
+        const datos = new FormData();
 
-    fetch("pacientes.php", {
-        method: "POST",
-        body: datos
-    })
-    .then(() => cargarPacientes());
+        datos.append("eliminar", id);
+
+        fetch("../php/paciente.php", {
+            method: "POST",
+            body: datos
+        })
+
+        .then(respuesta => respuesta.json())
+
+        .then(data => {
+
+            alert(data.mensaje);
+
+            cargarPacientes();
+
+        });
+
+    }
+
 }
 
 
+// CARGAR AL ABRIR LA PÁGINA
 cargarPacientes();

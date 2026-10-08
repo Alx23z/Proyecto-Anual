@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pacientes - Hospital CL</title>
+
+    <link rel="stylesheet" href="../css/paciente.css">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <aside>
+
+        <div class="logo">
+            <span>HC</span>
+            <b>Hospital CL</b>
+        </div>
+
+        <a href="principal.html">Inicio</a>
+        <a class="activo" href="paciente.html">Pacientes</a>
+        <a href="#">Médicos</a>
+        <a href="#">Consultas</a>
+        <a href="#">Servicios</a>
+        <a href="#">Traslados</a>
+        <a href="#">Ambulancia</a>
+        <a href="#">Encuesta</a>
+        <a href="#">Usuarios</a>
+
+    </aside>
+
+
+    <main>
+
+        <h1>Pacientes</h1>
+
+        <p>Gestión de pacientes del hospital</p>
+
+
+        <div class="formulario">
+
+            <h2>Registrar paciente</h2>
+
+            <form>
+
+                <input type="text" placeholder="Nombre">
+
+                <input type="text" placeholder="Apellido">
+
+                <input type="text" placeholder="DNI">
+
+                <input type="date">
+
+                <input type="text" placeholder="Teléfono">
+
+                <button type="submit">
+                    Guardar paciente
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="tabla">
+
+            <h2>Pacientes registrados</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Fecha nacimiento</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>12345678</td>
+                        <td>10/05/2000</td>
+                        <td>099123456</td>
+
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -8,15 +8,39 @@
     --azul-suave: #e8f3f7;
     --borde: #d5e0e5;
     --texto: #263238;
+    --fondo: #f4f7f9;
+    --blanco: #ffffff;
 }
 
 body {
     margin: 0;
-    padding: 32px clamp(16px, 5vw, 64px);
+    padding: 32px clamp(16px, 5vw, 54px);
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    background: #f4f7f9;
+    background: var(--fondo);
     color: var(--texto);
+}
+
+.nav-superior {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.nav-superior a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: var(--azul-principal);
+    color: var(--blanco);
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.nav-superior a:hover {
+    opacity: 0.9;
 }
 
 h1,
@@ -25,8 +49,8 @@ h2 {
 }
 
 h1 {
-    margin: 0 0 28px;
-    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    margin: 0 0 20px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
 h2 {
@@ -36,19 +60,23 @@ h2 {
 
 form {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px 18px;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 16px 18px;
     max-width: 760px;
     padding: 24px;
-    background: #fff;
+    background: var(--blanco);
     border: 1px solid var(--borde);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     font-weight: 700;
     color: #40545d;
 }
@@ -57,30 +85,31 @@ input {
     width: 100%;
     min-height: 42px;
     padding: 9px 11px;
+    border: 1px solid #b9c8d1;
+    border-radius: 8px;
     font: inherit;
     color: var(--texto);
     background: #fff;
-    border: 1px solid #b8c9d1;
-    border-radius: 6px;
 }
 
 input:focus {
-    outline: 3px solid rgba(25, 118, 163, 0.2);
+    outline: 3px solid rgba(25, 118, 163, 0.18);
     border-color: var(--azul-boton);
 }
 
 button {
     grid-column: 1 / -1;
     justify-self: start;
-    padding: 10px 18px;
+    min-width: 180px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul-boton);
+    color: var(--blanco);
     font: inherit;
     font-weight: 700;
-    color: #fff;
-    background: var(--azul-boton);
-    border: 0;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -89,19 +118,18 @@ button:hover {
 }
 
 button:focus-visible {
-    outline: 3px solid rgba(25, 118, 163, 0.3);
+    outline: 3px solid rgba(25, 118, 163, 0.25);
     outline-offset: 2px;
 }
 
 table {
     width: 100%;
-    min-width: 680px;
-    margin-top: 10px;
-    overflow: hidden;
+    margin-top: 12px;
+    border-collapse: collapse;
+    background: var(--blanco);
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    border-spacing: 0;
-    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th,
@@ -109,11 +137,12 @@ td {
     padding: 12px 14px;
     text-align: left;
     border-bottom: 1px solid var(--borde);
+    vertical-align: top;
 }
 
 th {
-    color: #fff;
     background: var(--azul-principal);
+    color: var(--blanco);
 }
 
 tbody tr:nth-child(even) {
@@ -128,7 +157,16 @@ tbody tr:last-child td {
     border-bottom: 0;
 }
 
-@media (max-width: 640px) {
+#lista td button {
+    display: inline-block;
+    min-width: 0;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
     body {
         padding: 22px 14px;
     }
@@ -140,10 +178,12 @@ tbody tr:last-child td {
 
     button {
         width: 100%;
+        justify-self: stretch;
     }
 
     table {
         display: block;
+        width: 100%;
         overflow-x: auto;
     }
 }

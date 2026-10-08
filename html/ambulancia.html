@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ambulancias</title>
+</head>
+
+<body>
+
+    <h1>Registrar ambulancia</h1>
+
+    <form action="ambulancia.php" method="POST">
+
+        <label>Patente:</label>
+        <input type="text" name="patente" required>
+
+        <br><br>
+
+        <label>Modelo:</label>
+        <input type="text" name="modelo">
+
+        <br><br>
+
+        <label>Estado:</label>
+        <select name="estado">
+            <option value="Disponible">Disponible</option>
+            <option value="En servicio">En servicio</option>
+            <option value="Mantenimiento">Mantenimiento</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Registrar ambulancia</button>
+
+    </form>
+<script src="js/ambulancia.js"></script>
+
+</body>
+
+</html>
