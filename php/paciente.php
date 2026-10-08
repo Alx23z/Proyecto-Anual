@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
     $dni = $_POST["dni"];
-    $fecha = $_POST["fecha"];
+    $fecha = $_POST["fecha_nacimiento"];
     $telefono = $_POST["telefono"];
 
 
@@ -72,6 +72,6 @@ while ($fila = $resultado->fetch_assoc()) {
     $pacientes[] = $fila;
 }
 
-echo json_encode($pacientes);
+echo json_encode(["pacientes" => $pacientes]);
 
 ?>
