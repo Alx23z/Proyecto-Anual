@@ -83,7 +83,6 @@ UBICACIONDESTINO.addEventListener('click', async () => {
         alert('Ocurrió un error al consultar la dirección de destino.');
     }
 });
-const mappa = L.map('mapa').setView([-32.3171, -58.08072], 17);
 const INGRESO = document.getElementById('ingreso');
 const UBICACION = document.getElementById('ubicacion');
 const DEPARTAMENTO = document.getElementById('departamento');
