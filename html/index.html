@@ -1,46 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel principal - Hospital CL</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Encuesta</h1>
-         <a href="index.html" class="boton">Volver al inicio</a>
+  <div class="layout">
 
-        <form id="encuesta">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-logo">HC</span>
+        <span class="brand-name">Hospital CL</span>
+      </div>
+      <nav class="menu">
+        <a href="#" class="menu-item active"><span class="ico">🏠</span>Inicio</a>
+        <a href="#" class="menu-item"><span class="ico">👥</span>Pacientes</a>
+        <a href="#" class="menu-item"><span class="ico">🩺</span>Médicos</a>
+        <a href="#" class="menu-item"><span class="ico">📋</span>Consultas</a>
+        <a href="#" class="menu-item"><span class="ico">⚙️</span>Servicios</a>
+        <a href="#" class="menu-item"><span class="ico">🚑</span>Traslados</a>
+        <a href="#" class="menu-item"><span class="ico">🚨</span>Ambulancia</a>
+        <a href="#" class="menu-item"><span class="ico">📝</span>Encuesta</a>
+        <a href="#" class="menu-item"><span class="ico">👤</span>Usuarios</a>
+      </nav>
+    </aside>
 
-            <label for="Nombre">Nombre:</label>
-            <input type="text" id="Nombre" name="nombre" required><br>
+    <!-- Contenido principal -->
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Panel principal</h1>
+          <p class="subtitle">Bienvenido al sistema hospitalario S.H. Clínica. Su resumen diario.</p>
+        </div>
+        <div class="topbar-tools">
+          <label class="search">
+            <span>🔍</span>
+            <input type="search" placeholder="Buscar pacientes, médicos...">
+          </label>
+          <button class="bell" aria-label="Notificaciones">🔔<i class="dot"></i></button>
+        </div>
+      </header>
 
-            <label for="Apellido">Apellido:</label>
-            <input type="Apellido" id="Apelldo" name="Apellido" required><br>
+      <div class="grid">
 
-            <label for="Edad">Edad:</label>
-            <input type="Edad" id="Edad" name="Edad" required><br>
+        <!-- Accesos rápidos -->
+        <section class="panel">
+          <h2>Accesos rápidos</h2>
+          <div class="quick">
+            <a href="#" class="quick-btn"><span class="qico">🧑‍⚕️</span>Nuevo paciente</a>
+            <a href="#" class="quick-btn"><span class="qico">📅</span>Nueva consulta</a>
+            <a href="#" class="quick-btn"><span class="qico">🚐</span>Gestionar traslado</a>
+            <a href="#" class="quick-btn"><span class="qico">📋</span>Ver encuesta</a>
+          </div>
+        </section>
 
+        <!-- Actividad reciente -->
+        <section class="panel">
+          <h2>Actividad reciente</h2>
+          <ul class="activity">
+            <li>
+              <span class="avatar a1">👩‍⚕️</span>
+              <div><p>Actividad en el sistema hospitalario</p><small>hace 13 horas</small></div>
+            </li>
+            <li>
+              <span class="avatar a2">👨‍⚕️</span>
+              <div><p>Nuevo paciente registrado</p><small>hace 13 horas</small></div>
+            </li>
+            <li>
+              <span class="avatar a3">👩</span>
+              <div><p>Consulta reprogramada</p><small>hace 13 horas</small></div>
+            </li>
+            <li>
+              <span class="avatar a4">🧑‍⚕️</span>
+              <div><p>Traslado completado</p><small>hace 14 horas</small></div>
+            </li>
+          </ul>
+        </section>
 
-            <label for="Dirección">Dirección:</label>
-            <input type="Dirección" name="Dirección" required><br>
+        <!-- Agenda del día -->
+        <section class="panel">
+          <h2>Agenda del día</h2>
+          <table class="agenda">
+            <thead>
+              <tr><th>Día</th><th>Consulta</th><th>Hora</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>20/03</td><td>Consulta</td><td>2:30 am</td></tr>
+              <tr><td>23/03</td><td>Consulta</td><td>5:30 pm</td></tr>
+              <tr><td>24/03</td><td>Consulta</td><td>6:30 pm</td></tr>
+            </tbody>
+          </table>
+        </section>
 
-            <label for="Gmail">Gmail:</label>
-            <input type="Gmail" name="Gmail" required><br>
-
-            <input type="submit" id="enviar" value="Enviar Respuesta">
-        </form>
-            <div id="mensaje"></div>
-    </div>
-    
-    <script src="../js/enviar.js"></script>
-
-
-
-
+      </div>
+    </main>
+  </div>
 </body>
-
 </html>
