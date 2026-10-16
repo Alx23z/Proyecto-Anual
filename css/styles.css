@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     background-color: #f0f4f8;
     display: flex;
@@ -13,6 +14,7 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
+
 .container {
     background-color: #ffffff;
     padding: 2.5rem;
@@ -24,6 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .container h1 {
     color: #1e3a8a;
     font-size: 2rem;
@@ -31,6 +34,7 @@ body {
     margin-bottom: 0.5rem;
     text-align: center;
 }
+
 .boton {
     display: inline-block;
     color: #2563eb;
@@ -40,16 +44,19 @@ body {
     margin-bottom: 1.8rem;
     transition: color 0.2s ease, transform 0.2s ease;
 }
+
 .boton:hover {
     color: #1d4ed8;
     text-decoration: underline;
     transform: translateY(-1px);
 }
+
 #encuesta {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 #encuesta label {
     color: #4b5563;
     font-size: 0.9rem;
@@ -58,6 +65,7 @@ body {
     margin-top: 0.8rem;
     display: block;
 }
+
 #encuesta input[type="text"],
 #encuesta input[type="number"],
 #encuesta input[type="email"],
@@ -75,12 +83,14 @@ body {
     outline: none;
     transition: all 0.2s ease-in-out;
 }
+
 #encuesta input:focus {
     border-color: #2563eb;
     background-color: #ffffff;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
-#enviar, 
+
+#enviar,
 #encuesta input[type="submit"] {
     margin-top: 1.8rem;
     background-color: #2563eb;
@@ -95,16 +105,19 @@ body {
     transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
+
 #enviar:hover,
 #encuesta input[type="submit"]:hover {
     background-color: #1d4ed8;
     transform: translateY(-1px);
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
 }
+
 #enviar:active,
 #encuesta input[type="submit"]:active {
     transform: translateY(0);
 }
+
 #mensaje {
     margin-top: 1.2rem;
     width: 100%;
@@ -114,18 +127,21 @@ body {
     border-radius: 6px;
     transition: all 0.3s ease;
 }
+
 #mensaje.exito {
     color: #15803d;
     background-color: #dcfce7;
     padding: 0.75rem;
     border: 1px solid #bbf7d0;
 }
+
 #mensaje.error {
     color: #b91c1c;
     background-color: #fee2e2;
     padding: 0.75rem;
     border: 1px solid #fecaca;
 }
+
 .welcome-title {
     color: #1e3a8a;
     margin-top: 10px;
@@ -134,6 +150,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
 }
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -143,9 +160,11 @@ body {
     align-items: start;
     margin-bottom: 40px;
 }
+
 .image-container {
     width: 100%;
 }
+
 .hospital-image {
     width: 100%;
     height: auto;
@@ -153,11 +172,13 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
     object-fit: cover;
 }
+
 .info-panels {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .info-card {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -165,23 +186,28 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border-left: 5px solid #2563eb;
 }
+
 .info-card h3 {
     color: #1e3a8a;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
+
 .info-card p {
     color: #4b5563;
     font-size: 0.95rem;
     line-height: 1.5;
 }
+
 @media (max-width: 600px) {
     .container {
         padding: 1.5rem;
     }
+
     .container h1 {
         font-size: 1.6rem;
     }
+
     .main-container {
         grid-template-columns: 1fr;
     }

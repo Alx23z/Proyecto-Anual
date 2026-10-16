@@ -79,7 +79,7 @@ input[type="email"]:focus {
 }
 
 input[type="submit"] {
-  background-color: #2efc05;
+  background-color: #102c54;
   color: white;
   border: none;
   padding: 12px;
@@ -92,7 +92,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #102c54;
+  background-color: #105427;
 }
 
 input[type="submit"]:active {
