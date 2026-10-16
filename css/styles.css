@@ -186,29 +186,3 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border-left: 5px solid #2563eb;
 }
-
-.info-card h3 {
-    color: #1e3a8a;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.info-card p {
-    color: #4b5563;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 1.5rem;
-    }
-
-    .container h1 {
-        font-size: 1.6rem;
-    }
-
-    .main-container {
-        grid-template-columns: 1fr;
-    }
-}
