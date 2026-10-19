@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     padding: 20px;
 }
@@ -66,13 +66,8 @@ body {
     display: block;
 }
 
-#encuesta input[type="text"],
-#encuesta input[type="number"],
-#encuesta input[type="email"],
-#encuesta input[type="Edad"],
-#encuesta input[type="Apellido"],
-#encuesta input[type="Dirección"],
-#encuesta input[type="Gmail"] {
+/* Selector corregido para agarrar todos los inputs del formulario de forma limpia */
+#encuesta input {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid #cbd5e1;
