@@ -1,44 +1,55 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 120vh;
+    min-height: 100vh;
     background-color: rgb(194, 210, 212);
+    margin: 0;
+    padding: 20px;
 }
 #mapa {
     width: 100%;
+    max-width: 1000px;
     height: 500px;
     margin-top: 20px;
     border: 1px solid #ccc;
 }
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    
 }
-
 input, textarea {
     margin-bottom: 10px;
     width: 300px;
-
 }
-
 #mensaje {
     font-weight: bold;
-
-
 }
-
 .campo {
     border: 1px solid rgb(205, 243, 255);
     padding: 10px;
-    }
-
-    .campo {
-    border: 1px solid rgb(205, 243, 255);
+}
+.contenedor-traslados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1100px;
+    width: 100%;
+    margin-top: 20px;
+}
+.traslado-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 320px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.seccion-bloque {
+    background-color: #f8f9fa;
     padding: 10px;
-    }
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

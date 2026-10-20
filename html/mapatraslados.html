@@ -10,45 +10,124 @@
 <body>
     <h1>MAPA DE TRASLADOS</h1>
     <div id="mapa"></div>
-    <div id="ingresos">
-        <br>
-        <h2>
-            <label for="ingreso_inicio">INGRESO INICIO:</label>
-            <input type="text" id="ingreso_inicio" name="ingreso_inicio" required><br>
-        </h2>
-        <h3>
-            <label for="ubicacion_inicio">UBICACION INICIO:</label>
-            <input type="button" id="ubicacion_inicio" name="ubicacion_inicio" value="UBICAR"><br>
-        </h3>
-        <h4>
-            <label for="departamento_inicio">DEPARTAMENTO INICIO:</label>
-            <input type="text" id="departamento_inicio" name="departamento_inicio" required><br>
-        </h4>
-        <h5>
-            <label for="direccion_inicio">DIRECCION INICIO:</label>
-            <input type="text" id="direccion_inicio" name="direccion_inicio" required><br>
-        </h5>
-    </div>
-    <div id="destino">
-        <br>
-        <h2>
-            <label for="ingreso_destino">INGRESO DESTINO:</label>
-            <input type="text" id="ingreso_destino" name="ingreso_destino" required><br>
-        </h2>
-        <h3>
-            <label for="ubicacion_destino">UBICACION DESTINO:</label>
-            <input type="button" id="ubicacion_destino" name="ubicacion_destino" value="UBICAR"><br>
-        </h3>
-        <h4>
-            <label for="departamento_destino">DEPARTAMENTO DESTINO:</label>
-            <input type="text" id="departamento_destino" name="departamento_destino" required><br>
-        </h4>
-        <h5>
-            <label for="direccion_destino">DIRECCION DESTINO:</label>
-            <input type="text" id="direccion_destino" name="direccion_destino" required><br>
-        </h5>
-    </div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="../js/mapa.js"></script>
+<div class="contenedor-traslados">
+<div class="traslado-card" style="border-top: 5px solid blue;">
+<h2>TRASLADO 1 (Azul)</h2>
+<div class="seccion-bloque">
+<h3>INICIO</h3>
+<label for="ingreso_inicio_1">INGRESO INICIO:</label>
+<input type="text" id="ingreso_inicio_1" name="ingreso_inicio_1"><br>
+<label for="departamento_inicio_1">DEPARTAMENTO INICIO:</label>
+<input type="text" id="departamento_inicio_1" name="departamento_inicio_1"><br>
+<label for="direccion_inicio_1">DIRECCION INICIO:</label>
+<input type="text" id="direccion_inicio_1" name="direccion_inicio_1"><br>
+<input type="button" id="ubicacion_inicio_1" value="UBICAR INICIO 1"><br>
+</div>
+<div class="seccion-bloque">
+<h3>DESTINO</h3>
+<label for="ingreso_destino_1">INGRESO DESTINO:</label>
+<input type="text" id="ingreso_destino_1" name="ingreso_destino_1"><br>
+<label for="departamento_destino_1">DEPARTAMENTO DESTINO:</label>
+<input type="text" id="departamento_destino_1" name="departamento_destino_1"><br>
+<label for="direccion_destino_1">DIRECCION DESTINO:</label>
+<input type="text" id="direccion_destino_1" name="direccion_destino_1"><br>
+<input type="button" id="ubicacion_destino_1" value="UBICAR DESTINO 1"><br>
+</div>
+</div>
+<div class="traslado-card" style="border-top: 5px solid red;">
+<h2>TRASLADO 2 (Rojo)</h2>
+<div class="seccion-bloque">
+<h3>INICIO</h3>
+<label for="ingreso_inicio_2">INGRESO INICIO:</label>
+<input type="text" id="ingreso_inicio_2" name="ingreso_inicio_2"><br>
+<label for="departamento_inicio_2">DEPARTAMENTO INICIO:</label>
+<input type="text" id="departamento_inicio_2" name="departamento_inicio_2"><br>
+<label for="direccion_inicio_2">DIRECCION INICIO:</label>
+<input type="text" id="direccion_inicio_2" name="direccion_inicio_2"><br>
+<input type="button" id="ubicacion_inicio_2" value="UBICAR INICIO 2"><br>
+</div>
+<div class="seccion-bloque">
+<h3>DESTINO</h3>
+<label for="ingreso_destino_2">INGRESO DESTINO:</label>
+<input type="text" id="ingreso_destino_2" name="ingreso_destino_2"><br>
+<label for="departamento_destino_2">DEPARTAMENTO DESTINO:</label>
+<input type="text" id="departamento_destino_2" name="departamento_destino_2"><br>
+<label for="direccion_destino_2">DIRECCION DESTINO:</label>
+<input type="text" id="direccion_destino_2" name="direccion_destino_2"><br>
+<input type="button" id="ubicacion_destino_2" value="UBICAR DESTINO 2"><br>
+</div>
+</div>
+<div class="traslado-card" style="border-top: 5px solid green;">
+<h2>TRASLADO 3 (Verde)</h2>
+<div class="seccion-bloque">
+<h3>INICIO</h3>
+<label for="ingreso_inicio_3">INGRESO INICIO:</label>
+<input type="text" id="ingreso_inicio_3" name="ingreso_inicio_3"><br>
+<label for="departamento_inicio_3">DEPARTAMENTO INICIO:</label>
+<input type="text" id="departamento_inicio_3" name="departamento_inicio_3"><br>
+<label for="direccion_inicio_3">DIRECCION INICIO:</label>
+<input type="text" id="direccion_inicio_3" name="direccion_inicio_3"><br>
+<input type="button" id="ubicacion_inicio_3" value="UBICAR INICIO 3"><br>
+</div>
+<div class="seccion-bloque">
+<h3>DESTINO</h3>
+<label for="ingreso_destino_3">INGRESO DESTINO:</label>
+<input type="text" id="ingreso_destino_3" name="ingreso_destino_3"><br>
+<label for="departamento_destino_3">DEPARTAMENTO DESTINO:</label>
+<input type="text" id="departamento_destino_3" name="departamento_destino_3"><br>
+<label for="direccion_destino_3">DIRECCION DESTINO:</label>
+<input type="text" id="direccion_destino_3" name="direccion_destino_3"><br>
+<input type="button" id="ubicacion_destino_3" value="UBICAR DESTINO 3"><br>
+</div>
+</div>
+<div class="traslado-card" style="border-top: 5px solid orange;">
+<h2>TRASLADO 4 (Naranja)</h2>
+<div class="seccion-bloque">
+<h3>INICIO</h3>
+<label for="ingreso_inicio_4">INGRESO INICIO:</label>
+<input type="text" id="ingreso_inicio_4" name="ingreso_inicio_4"><br>
+<label for="departamento_inicio_4">DEPARTAMENTO INICIO:</label>
+<input type="text" id="departamento_inicio_4" name="departamento_inicio_4"><br>
+<label for="direccion_inicio_4">DIRECCION INICIO:</label>
+<input type="text" id="direccion_inicio_4" name="direccion_inicio_4"><br>
+<input type="button" id="ubicacion_inicio_4" value="UBICAR INICIO 4"><br>
+</div>
+<div class="seccion-bloque">
+<h3>DESTINO</h3>
+<label for="ingreso_destino_4">INGRESO DESTINO:</label>
+<input type="text" id="ingreso_destino_4" name="ingreso_destino_4"><br>
+<label for="departamento_destino_4">DEPARTAMENTO DESTINO:</label>
+<input type="text" id="departamento_destino_4" name="departamento_destino_4"><br>
+<label for="direccion_destino_4">DIRECCION DESTINO:</label>
+<input type="text" id="direccion_destino_4" name="direccion_destino_4"><br>
+<input type="button" id="ubicacion_destino_4" value="UBICAR DESTINO 4"><br>
+</div>
+</div>
+<div class="traslado-card" style="border-top: 5px solid purple;">
+<h2>TRASLADO 5 (Púrpura)</h2>
+<div class="seccion-bloque">
+<h3>INICIO</h3>
+<label for="ingreso_inicio_5">INGRESO INICIO:</label>
+<input type="text" id="ingreso_inicio_5" name="ingreso_inicio_5"><br>
+<label for="departamento_inicio_5">DEPARTAMENTO INICIO:</label>
+<input type="text" id="departamento_inicio_5" name="departamento_inicio_5"><br>
+<label for="direccion_inicio_5">DIRECCION INICIO:</label>
+<input type="text" id="direccion_inicio_5" name="direccion_inicio_5"><br>
+<input type="button" id="ubicacion_inicio_5" value="UBICAR INICIO 5"><br>
+</div>
+<div class="seccion-bloque">
+<h3>DESTINO</h3>
+<label for="ingreso_destino_5">INGRESO DESTINO:</label>
+<input type="text" id="ingreso_destino_5" name="ingreso_destino_5"><br>
+<label for="departamento_destino_5">DEPARTAMENTO DESTINO:</label>
+<input type="text" id="departamento_destino_5" name="departamento_destino_5"><br>
+<label for="direccion_destino_5">DIRECCION DESTINO:</label>
+<input type="text" id="direccion_destino_5" name="direccion_destino_5"><br>
+<input type="button" id="ubicacion_destino_5" value="UBICAR DESTINO 5"><br>
+</div>
+</div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="../js/mapa.js"></script>
 </body>
 </html>
