@@ -1,0 +1,67 @@
+
+/* Diseño de la página Ambulancia */
+.titulo-ambulancia {
+    font-size: 34px;
+    font-weight: normal;
+    color: #173650;
+    margin-bottom: 25px;
+}
+
+.bienvenida-ambulancia {
+    background: #fff;
+    border: 1px solid #cbd7e2;
+    border-left: 6px solid #0784bd;
+    padding: 20px 25px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta-ambulancia {
+    background: #fff;
+    border: 1px solid #cbd7e2;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.tarjeta-ambulancia h2 {
+    padding: 18px 25px;
+    font-size: 25px;
+    color: #173650;
+    border-bottom: 1px solid #cbd7e2;
+}
+
+.tarjeta-ambulancia form {
+    padding: 25px 30px;
+}
+
+.tarjeta-ambulancia label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.tarjeta-ambulancia input,
+.tarjeta-ambulancia select {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    border: 1px solid #b4c3d2;
+    border-radius: 4px;
+    background: white;
+    font-size: 17px;
+}
+
+.tarjeta-ambulancia button {
+    background: #087eae;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
