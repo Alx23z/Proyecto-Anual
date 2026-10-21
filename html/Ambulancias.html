@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
-
-    <meta charset="UTF-8">
-
-    <title>Estado de Ambulancias</title>
+       <meta charset="UTF-8">
+       <title>Estado de Ambulancias</title>
+       <link rel="stylesheet" href="../css/ambulancias.css">
 
 </head>
 
@@ -14,200 +12,39 @@
 
 
 
-    <h1>Listado de Ambulancias</h1>
+       <div class="contenido">
+              <h2>Gestión de Ambulancias y Traslados</h2>
 
+              <form action="traslado.php" method="POST">
 
+                     <label>Ambulancia:</label>
+                     <input type="text" name="ambulancia" required placeholder="Matrícula de la ambulancia">
 
-    <form>
+                     <label>Conductor responsable:</label>
+                     <input type="text" name="conductor" required placeholder="Nombre del conductor">
 
-        <p>
+                     <label>Copiloto / Acompañante:</label>
+                     <input type="text" name="copiloto" placeholder="Nombre del acompañante">
 
-            <b>Ambulancia 1:</b>
+                     <label>Paciente o elemento a trasladar:</label>
+                     <input type="text" name="paciente" required placeholder="Nombre del paciente o elemento">
 
-            <select>
+                     <label>Punto de origen:</label>
+                     <input type="text" name="origen" required placeholder="Lugar de salida">
 
-                <option value="disponible">Disponible</option>
+                     <label>Punto de destino:</label>
+                     <input type="text" name="destino" required placeholder="Lugar de llegada">
 
-                <option value="ocupado">Ocupado</option>
+                     <label>Hora de salida:</label>
+                     <input type="datetime-local" name="hora_salida" required>
 
-                <option value="mantenimiento">En mantenimiento</option>
+                     <label>Hora estimada de llegada:</label>
+                     <input type="datetime-local" name="hora_estimada">
 
-            </select>
+                     <label>Hora efectiva de llegada:</label>
+                     <input type="datetime-local" name="hora_llegada">
 
-        </p>
+                     <button type="submit">Registrar traslado</button>
 
-
-
-        <p>
-
-            <b>Ambulancia 2:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 3:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 4:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 5:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 6:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 7:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 8:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 9:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-
-
-        <p>
-
-            <b>Ambulancia 10:</b>
-
-            <select>
-
-                <option value="disponible">Disponible</option>
-
-                <option value="ocupado">Ocupado</option>
-
-                <option value="mantenimiento">En mantenimiento</option>
-
-            </select>
-
-        </p>
-
-    </form>
-
-
-
-    <br>
-
-    <a href="index.html">Volver al Inicio</a>
-
-
-
-</body>
-
-</html>
+              </form>
+       </div>
