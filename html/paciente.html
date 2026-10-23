@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes - Hospital de Clínicas</title>
+    <link rel="stylesheet" href="../css/paciente.css">
+</head>
+<body>
+
+    <header>
+        <h2>✚ Hospital de Clínicas</h2>
+        <span>S.I.G.S.M. | Administrador</span>
+    </header>
+
+    <div class="contenedor">
+
+        <nav>
+            <a href="index.html">⌂ Inicio</a>
+            <a href="paciente.html" class="activo">♙ Pacientes</a>
+            <a href="medicos.html">⚕ Médicos</a>
+            <a href="consultas.html">▦ Consultas</a>
+            <a href="ambulancias.html">🚑 Traslados / Ambulancias</a>
+            <a href="documentos.html">▤ Documentos</a>
+            <a href="encuestas.html">☑ Encuestas</a>
+        </nav>
+
+        <main>
+
+            <h1>Gestión de pacientes</h1>
+            <p>Registrar, consultar, modificar y eliminar pacientes del hospital.</p>
+
+            <section class="formulario">
+                <h2 id="tituloFormulario">Registrar paciente</h2>
+
+                <form id="formPaciente">
+
+                    <input type="hidden" id="id_paciente" name="id_paciente">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre"
+                               placeholder="Nombre del paciente" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido"
+                               placeholder="Apellido del paciente" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="dni">Cédula / DNI</label>
+                        <input type="text" id="dni" name="dni"
+                               placeholder="Documento de identidad" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fecha_nacimiento"
+                               name="fecha_nacimiento" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono"
+                               placeholder="Teléfono de contacto">
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" id="btnGuardar">
+                            Guardar paciente
+                        </button>
+
+                        <button type="button" class="btn-cancelar"
+                                id="btnCancelar" hidden>
+                            Cancelar edición
+                        </button>
+                    </div>
+
+                </form>
+
+                <p id="mensaje" class="mensaje" hidden></p>
+            </section>
+
+            <section class="tabla-contenedor">
+                <h2>Lista de pacientes</h2>
+
+                <div style="margin-bottom: 15px;">
+                    <input type="search" id="buscar"
+                           placeholder="Buscar por nombre, apellido o documento">
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Documento</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="lista">
+                        <tr>
+                            <td colspan="7">Cargando pacientes...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
