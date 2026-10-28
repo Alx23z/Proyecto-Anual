@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: Arial, sans-serif;
 }
 
@@ -230,5 +228,4 @@ input:focus {
     color: #2b6cb0;
     text-decoration: underline;
 }
-=======
->>>>>>> 39dce509b57aac6f546b5e468bbaf5ef1fe9f8af
+
