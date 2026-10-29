@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 20px;
 }
+
 #mapa {
     width: 100%;
     max-width: 1000px;
@@ -19,11 +20,19 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 input, textarea {
+
+
+
+}
+
+input,
+
     margin-bottom: 10px;
     width: 300px;
-}
+
 #mensaje {
     font-weight: bold;
 }
@@ -31,6 +40,7 @@ input, textarea {
     border: 1px solid rgb(205, 243, 255);
     padding: 10px;
 }
+
 .contenedor-traslados {
     display: flex;
     flex-wrap: wrap;
@@ -52,4 +62,9 @@ input, textarea {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+
+.campo {
+    border: 1px solid rgb(205, 243, 255);
+    padding: 10px;
+}
 }
