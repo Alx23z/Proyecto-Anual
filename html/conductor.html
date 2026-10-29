@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conductores - Hospital CL</title>
+    <link rel="stylesheet" href="../css/conductor.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hospital CL</h1>
+        <a class="volver" href="principal.html">← Inicio</a>
+    </header>
+
+    <main>
+        <h2>Conductores de ambulancia</h2>
+
+        <form action="../php/conductor.php" method="POST">
+            <fieldset>
+                <legend>Datos del conductor</legend>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" name="cedula" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="licencia">Licencia</label>
+                <input type="text" id="licencia" name="numero_licencia" required>
+
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
+            </fieldset>
+
+            <button type="submit">Guardar</button>
+        </form>
+    </main>
+
+</body>
+</html>
