@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="../css/encuesta.css">
+</head>
+<body>
+    <div class="contenedor">
+
+    
+    <main>
+        <h1>Hospital de Clínicas</h1>
+        <h2>Encuesta de satisfacción</h2>
+
+        <p>Tu opinión nos ayuda a mejorar la atención del hospital.</p>
+
+        <form id="formEncuesta">
+
+            <label>¿Cómo calificás la atención recibida?</label>
+            <select name="atencion" required>
+                <option value="">Seleccionar</option>
+                <option value="Excelente">Excelente</option>
+                <option value="Muy buena">Muy buena</option>
+                <option value="Buena">Buena</option>
+                <option value="Regular">Regular</option>
+                <option value="Mala">Mala</option>
+            </select>
+
+            <br><br>
+
+            <label>¿Cómo fue el tiempo de espera?</label>
+            <select name="espera" required>
+                <option value="">Seleccionar</option>
+                <option value="Muy corto">Muy corto</option>
+                <option value="Adecuado">Adecuado</option>
+                <option value="Largo">Largo</option>
+            </select>
+
+            <br><br>
+
+            <label>¿Cómo fue el trato del personal?</label>
+            <select name="trato" required>
+                <option value="">Seleccionar</option>
+                <option value="Excelente">Excelente</option>
+                <option value="Bueno">Bueno</option>
+                <option value="Regular">Regular</option>
+                <option value="Malo">Malo</option>
+            </select>
+
+            <br><br>
+
+            <label>Comentarios o sugerencias</label>
+            <textarea name="comentario"
+                rows="4"
+                placeholder="Escribí tu opinión..."></textarea>
+
+            <br><br>
+
+            <button type="submit">Enviar encuesta</button>
+
+        </form>
+
+        <p><a href="principal.html">Volver A la página principal</a></p>
+    </main>
+
+</body>
+</html>

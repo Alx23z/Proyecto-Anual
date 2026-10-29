@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.I.G.S.M. | Hospital de Clínicas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+ <body>
+
+<header class="barra-superior">
+    <a class="marca" href="principal.html">
+        <span class="marca-icono">+</span>
+        Hospital de Clínicas
+    </a>
+    <div class="barra-derecha">
+        <span>S.I.G.S.M.</span>
+        <span class="usuario">Administrador</span>
+    </div>
+</header>
+
+
+<div class="estructura">
+
+    <aside class="menu-lateral">
+        <p class="menu-titulo">MENÚ PRINCIPAL</p>
+
+        <a class="enlace activo" href="principal.html">⌂ Inicio</a>
+        <a class="enlace" href="paciente.html">♙ Pacientes</a>
+        <a class="enlace" href="funcionario.html">⚕ Funcionarios</a>
+        <a class="enlace" href="ambulancias.html">🚑 Mapa/Traslados</a>
+        <a class="enlace" href="documentos.html">▤ Documentos</a>
+        <a class="enlace" href="encuesta.html">☑ Encuesta</a>
+        <a class="enlace" href="servicios.html">☑ Servicios</a>
+
+        <div class="separador"></div>
+
+        <a class="enlace" href="login.html">↩ Cerrar sesión</a>
+    </aside>
+    <aside>
+    <main class="contenido">
+
+        <div class="encabezado-pagina">
+            <div>
+                <p class="ruta">Inicio / Escritorio</p>
+                <h1>Escritorio</h1>
+                <p class="descripcion">
+                    Sistema Informático de Gestión de Servicios Médicos
+                </p>
+            </div>
+            <div class="fecha" id="fecha"></div>
+        </div>
+
+        <section class="bienvenida">
+            <h2>Bienvenido al Sistema hospitalario</h2>
+            <p>
+                Desde este panel podés acceder a los módulos para organizar
+                y gestionar la información del Hospital de Clínicas.
+            </p>
+        </section>
+
+        <section class="panel-modulos">
+            <div class="titulo-panel">
+                <h2>Acceso a los módulos</h2>
+                <p>Seleccioná una sección para continuar.</p>
+            </div>
+
+            <div class="lista-modulos">
+
+                <a href="paciente.html" class="modulo">
+                    <span class="modulo-icono">♙</span>
+                    <span>
+                        <strong>Gestión de pacientes</strong>
+                        <small>Alta, consulta, modificación y baja de pacientes.</small>
+                    </span>
+                    <b></b>
+                </a>
+
+                <a href="funcionario.html" class="modulo">
+                    <span class="modulo-icono">⚕</span>
+                    <span>
+                        <strong>Gestión de funcionarios</strong>
+                        <small>Información del personal médico.</small>
+                    </span>
+                    <b></b>
+                </a>
+
+                <a href="consultas.html" class="modulo">
+                    <span class="modulo-icono">▦</span>
+                    <span>
+                        <strong>Consultas</strong>
+                        <small>Organización de consultas y turnos.</small>
+                    </span>
+                    <b></b>
+                </a>
+
+                <a href="ambulancias.html" class="modulo">
+                    <span class="modulo-icono">🚑</span>
+                    <span>
+                        <strong>Traslados y ambulancias</strong>
+                        <small>Pacientes, conductores, vehículos, origen y destino.</small>
+                    </span>
+                    <b></b>
+                </a>
+
+                <a href="documentos.html" class="modulo">
+                    <span class="modulo-icono">▤</span>
+                    <span>
+                        <strong>Documentos</strong>
+                        <small>Documentos médicos e informativos.</small>
+                    </span>
+                    <b></b>
+                </a>
+
+                <a href="encuesta.html" class="modulo">
+                    <span class="modulo-icono">☑</span>
+                    <span>
+                        <strong>Encuesta</strong>
+                        <small>Encuesta de satisfacción para los usuarios.</small>
+                    </span>
+                    <b></b>
+                </a>
+
+
+            </div>
+        </section>
+
+        <footer>
+            Hospital de Clínicas · S.I.G.S.M. · 2026
+        </footer>
+
+    </main>
+</div>
+
+<script>
+    document.getElementById("fecha").textContent =
+        new Date().toLocaleDateString("es-UY", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+</script>
+
+</body>
+</html>
