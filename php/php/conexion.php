@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/config.php';
+require_once 'config.php';
 
 $con = new mysqli(BD_HOST, BD_USUARIO, BD_CLAVE, BD_NOMBRE);
 
@@ -8,17 +8,4 @@ if ($con->connect_error) {
     error_log("Error de conexión MySQL: " . $con->connect_error);
     die("No se pudo conectar con el servidor. Intente más tarde.");
 }
-
-// códigos de error de MySQL que se atienden a mano para dar un mensaje claro:
-// el registro no se puede borrar porque otra tabla lo usa (clave foránea) / se repite una clave única
-
-const ERROR_EN_USO = 1451;
-const ERROR_DUPLICADO = 1062;
-
-function filas($resultado) {
-    $out = [];
-    while ($fila = $resultado->fetch_assoc()) {
-        $out[] = $fila;
-    }
-    return $out;
-}
+?>

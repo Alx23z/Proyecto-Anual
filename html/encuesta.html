@@ -22,7 +22,7 @@
         <form id="formEncuesta">
 
             <label>¿Cómo calificás la atención recibida?</label>
-            <select name="atencion" required>
+            <select name="atencion" id="atencion" required>
                 <option value="">Seleccionar</option>
                 <option value="Excelente">Excelente</option>
                 <option value="Muy buena">Muy buena</option>
@@ -34,7 +34,7 @@
             <br><br>
 
             <label>¿Cómo fue el tiempo de espera?</label>
-            <select name="espera" required>
+            <select name="espera" id="espera" required>
                 <option value="">Seleccionar</option>
                 <option value="Muy corto">Muy corto</option>
                 <option value="Adecuado">Adecuado</option>
@@ -44,7 +44,7 @@
             <br><br>
 
             <label>¿Cómo fue el trato del personal?</label>
-            <select name="trato" required>
+            <select name="trato" id="trato" required>
                 <option value="">Seleccionar</option>
                 <option value="Excelente">Excelente</option>
                 <option value="Bueno">Bueno</option>
@@ -57,7 +57,7 @@
             <label>Comentarios o sugerencias</label>
             <textarea name="comentario"
                 rows="4"
-                placeholder="Escribí tu opinión..."></textarea>
+                placeholder="Escribí tu opinión..." id="comentario"></textarea>
 
             <br><br>
 
@@ -67,6 +67,6 @@
 
         <p><a href="principal.html">Volver A la página principal</a></p>
     </main>
-
+<script src="../js/encuesta.js"></script>
 </body>
 </html>
