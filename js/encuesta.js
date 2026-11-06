@@ -36,6 +36,6 @@ formulario.addEventListener("submit", async function(e) {
 
     } catch (error) {
         console.error("Error:", error);
-        alert("No se pudo enviar la encuesta. Verificá la conexión.");
+        alert("No se pudo enviar la encuesta. Verificá la conexión." + error);
     }
 });

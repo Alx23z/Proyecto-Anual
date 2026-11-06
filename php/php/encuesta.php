@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Consulta adaptada a tus columnas actuales: atencion, trato, espera
     $sql = "INSERT INTO respuestas_encuesta (atencion, trato, espera) VALUES (?, ?, ?)";
-    $stmt = $conexion->prepare($sql);
+    $stmt = $con->prepare($sql);
 
     if ($stmt) {
         $stmt->bind_param("sss", $atencion, $trato, $espera);
